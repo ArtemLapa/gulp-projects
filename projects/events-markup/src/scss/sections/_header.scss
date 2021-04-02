@@ -1,0 +1,49 @@
+$style: "header";
+.#{$style} {
+  height: 124px;
+  background-color: $primary-purple;
+  padding-top: 8px;
+  &__logo {
+    display: block;
+    width: 180px;
+    height: 40px;
+    background-color: $logo-bg;
+  }
+  &__navigation-list {
+    display: flex;
+  }
+  &__navigation-link {
+    @include text($H60, 700, $white);
+  }
+  &__navigation-item {
+    color: $white;
+    &--dots {
+      width: 6px;
+      height: 6px;
+      background-color: $white;
+      border-radius: 50%;
+      &:before {
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        background-color: $white;
+        border-radius: 50%;
+      }
+    }
+  }
+  &__sign-list {
+    display: flex;
+  }
+  &__navigation-list-hovered {
+    display: none;
+  }
+  &__search {
+    height: 40px;
+  }
+  &__submit-button {
+    width: 90px;
+    height: 40px;
+    margin-left: 24px;
+  }
+}
