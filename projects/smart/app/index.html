@@ -1,14 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="initial-scale=1.0, width=device-width">
-	<title>Title</title>
-	<link rel="shortcut icon" type="image/x-icon" href="assets/fav/favicon.ico">
-	<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <title>Smart - essay writing service</title>
+  <link rel="shortcut icon" type="image/x-icon" href="assets/fav/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-	<script src="js/bundle.js"></script>
+  <header class="header">
+    <div class="container">
+      <nav class="header__navigation">
+        <div class="header__logo-wrapper">
+          <a href="/" class="header__link-home">
+            <img src="./img/logo.png" alt="Smart - essay writing service" class="header__logo">
+          </a>
+        </div>
+
+        <button class="header__mobile-menu">m</button>
+      </nav>
+
+      <div class="intro">
+        <h1 class="intro__heading">Lorem ipsum dolor sit amet, consectetur </h1>
+        <p class="intro__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim
+        </p>
+        <img src="./img/down.svg" alt="arrow down">
+      </div>
+
+      <div class="order">
+        <form class="order__form">
+          <h6 class="order__heading">Place your order</h6>
+
+          <input type="email" name="email" id="email" class="order__input" placeholder="Enter your email">
+
+          <select name="complexity" id="complexity" class="order__select">
+            <option value="essay" class="order__option">Essay</option>
+            <option value="middle" class="order__option">Middle</option>
+            <option value="hard" class="order__option">Hard</option>
+          </select>
+
+          <select name="size" id="size" class="order__select">
+            <option value="essay" class="order__option">275</option>
+            <option value="middle" class="order__option">350</option>
+            <option value="hard" class="order__option">415</option>
+          </select>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="testimonials">
+      <h3 class="testimonials__heading">Testimonials</h3>
+
+      <div class="testimonials__card-wrapper">
+        <p class="testimonials__text"></p>
+        <span class="testimonials__author"></span>
+      </div>
+
+      <div class="testimonials__detail-wrapper">
+        <span class="testimonials__rate">3/10</span>
+        <button class="testimonials__add-testimonial">Add Testimonial</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/bundle.js"></script>
 </body>
+
 </html>

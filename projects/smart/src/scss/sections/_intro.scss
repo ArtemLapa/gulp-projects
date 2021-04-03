@@ -1,0 +1,20 @@
+$style: "intro";
+.#{$style} {
+  margin-top: 46px;
+  @include flex(center, center, column);
+  &__heading {
+    max-width: 236px;
+    @include text($H360, 700, $white-100);
+    font-family: $playfair;
+    text-align: center;
+    margin-bottom: 26px;
+  }
+  &__description {
+    @include text($H60, 400, $white-100);
+    font-family: $karla;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 272px;
+    margin-bottom: 14px;
+  }
+}

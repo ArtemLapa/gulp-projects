@@ -1,0 +1,7 @@
+$style: "header";
+.#{$style} {
+  padding-top: 16px;
+  &__navigation {
+    @include flex(space-between, center);
+  }
+}
