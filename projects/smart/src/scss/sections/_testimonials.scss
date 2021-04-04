@@ -1,0 +1,61 @@
+$style: "testimonials";
+.#{$style} {
+  padding-top: 42px;
+  padding-bottom: 68px;
+  &__heading {
+    @include text($H360, 400, $grey-80);
+    font-family: $playfair;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__card-wrapper {
+    background-color: $white-100;
+    border-radius: 3px;
+    padding: 30px 20px 50px;
+    margin-bottom: 28px;
+  }
+  &__text {
+    @include text($H60, 400, $grey-50);
+    text-align: center;
+    font-style: italic;
+    font-family: $karla;
+    line-height: 1.5;
+    &:after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: $white-50;
+      margin-top: 10px;
+      margin-bottom: 14px;
+    }
+  }
+  &__author {
+    @include text($H60, 400, $grey-80);
+    text-align: center;
+    font-family: $ovo;
+    line-height: 1.5;
+    display: block;
+  }
+  &__detail-wrapper {
+    @include flex(center, center, column);
+  }
+  &__rate {
+    @include text($H240, 400, $grey-80);
+    font-family: $ovo;
+    text-align: center;
+    line-height: 1.25;
+    display: block;
+    margin-bottom: 26px;
+  }
+  &__primary-btn {
+    width: 224px;
+    background-color: $white-50;
+    border: 1px solid $red;
+    color: $red;
+    text-transform: capitalize;
+    &:focus {
+      box-shadow: 0 0 0 2px #ce3e22;
+    }
+  }
+}

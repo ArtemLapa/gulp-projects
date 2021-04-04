@@ -1,7 +1,82 @@
 $style: "header";
 .#{$style} {
+  background-color: $grey-100;
   padding-top: 16px;
+  padding-bottom: 44px;
+  background-image: url(../img/pic-mob.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  z-index: 1;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: rgba(#3a3a3a, .7);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+  }
   &__navigation {
     @include flex(space-between, center);
+  }
+  &__menu-btn {
+    position: relative;
+    height: 16px;
+    width: 26px;
+    background: transparent;
+    border: none;
+    outline: none;
+    &--active {
+      .header__btn-element {
+        height: 0;
+      }
+      .header__btn-element:before {
+        transform: rotate(45deg);
+      }
+      .header__btn-element:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &__btn-element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 2px;
+    width: 24px;
+    margin-top: -1px;
+    margin-left: -12px;
+    background-color: $white-100;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 2px;
+      width: 24px;
+      margin-top: -1px;
+      margin-left: -12px;
+      background-color: $white-100;
+      transform: translateY(-5px);
+      transition: .3s ease;
+    }
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 2px;
+      width: 24px;
+      margin-top: -1px;
+      margin-left: -12px;
+      background-color: $white-100;
+      transform: translateY(5px);
+      transition: .3s ease;
+    }
   }
 }

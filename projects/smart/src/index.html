@@ -20,7 +20,14 @@
           </a>
         </div>
 
-        <button class="header__mobile-menu">m</button>
+        <button class="header__menu-btn">
+          <span class="header__btn-element"></span>
+        </button>
+
+        <!-- <div class="header__navigation-menu-wrapper">
+          <button type="submit" class="order__submit-btn">Order Now</button>
+          <ul class="header__navigation-list"></ul>
+        </div> -->
       </nav>
 
       <div class="intro">
@@ -29,7 +36,7 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Ut enim ad minim
         </p>
-        <img src="./img/down.svg" alt="arrow down">
+        <img src="./img/down.png" alt="arrow down" class="intro__arrow-down">
       </div>
 
       <div class="order">
@@ -49,6 +56,8 @@
             <option value="middle" class="order__option">350</option>
             <option value="hard" class="order__option">415</option>
           </select>
+
+          <button type="submit" class="primary-btn order__primary-btn ">Order Now</button>
         </form>
       </div>
     </div>
@@ -56,16 +65,23 @@
 
   <main class="main">
     <section class="testimonials">
-      <h3 class="testimonials__heading">Testimonials</h3>
+      <div class="container">
+        <h3 class="testimonials__heading">Testimonials</h3>
 
-      <div class="testimonials__card-wrapper">
-        <p class="testimonials__text"></p>
-        <span class="testimonials__author"></span>
-      </div>
+        <div class="testimonials__card-wrapper">
+          <p class="testimonials__text">
+            When I was stuck with my essay writing and thought that there is no way out, you guys appeared out of
+            the
+            blue! Your writing team deserves appreciation. I cannot imagine my student life without your competent
+            assistance. Thank you!
+          </p>
+          <span class="testimonials__author">Andrey L.</span>
+        </div>
 
-      <div class="testimonials__detail-wrapper">
-        <span class="testimonials__rate">3/10</span>
-        <button class="testimonials__add-testimonial">Add Testimonial</button>
+        <div class="testimonials__detail-wrapper">
+          <span class="testimonials__rate">3/10</span>
+          <button class="primary-btn testimonials__primary-btn">Add Testimonial</button>
+        </div>
       </div>
     </section>
   </main>
