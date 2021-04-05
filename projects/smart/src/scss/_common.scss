@@ -81,3 +81,11 @@ p {
   justify-content: space-between;
   align-items: center;
 }
+
+.swiper-container {
+  min-width: 290px;
+  max-width: 1920px;
+  // min-height: 290px;
+  // max-height: 210px;
+  margin-bottom: 28px;
+}

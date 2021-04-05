@@ -6,6 +6,8 @@
   <meta name="viewport" content="initial-scale=1.0, width=device-width">
   <title>Smart - essay writing service</title>
   <link rel="shortcut icon" type="image/x-icon" href="assets/fav/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -28,7 +30,7 @@
                 <a href="/" class="header__navigation-link header__navigation-link--active">Home</a>
               </li>
               <li class="header__navigation-item">
-                <a href="#aboutUs" class="header__navigation-link">About Us</a>
+                <a href="#testimonials" class="header__navigation-link">About Us</a>
               </li>
               <li class="header__navigation-item">
                 <a href="#blog" class="header__navigation-link">Blog</a>
@@ -82,17 +84,26 @@
       <div class="container">
         <h3 class="testimonials__heading">Testimonials</h3>
 
-        <div class="testimonials__card-wrapper">
-          <p class="testimonials__text">
-            When I was stuck with my essay writing and thought that there is no way out, you guys appeared out of
-            the
-            blue! Your writing team deserves appreciation. I cannot imagine my student life without your competent
-            assistance. Thank you!
-          </p>
-          <span class="testimonials__author">Andrey L.</span>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="testimonials__card-wrapper swiper-slide">
+              <p class="testimonials__text">
+                When I was stuck with my essay writing and thought that there is no way out, you guys appeared out of
+                the
+                blue! Your writing team deserves appreciation. I cannot imagine my student life without your competent
+                assistance. Thank you!
+              </p>
+              <span class="testimonials__author">Andrey L.</span>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
         </div>
 
         <div class="testimonials__detail-wrapper">
+          <!-- <div class="swiper-pagination"></div> -->
+
           <span class="testimonials__rate">3/10</span>
           <button class="primary-btn testimonials__primary-btn">Add Testimonial</button>
         </div>
@@ -100,6 +111,8 @@
     </section>
   </main>
 
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/bundle.js"></script>
 </body>
 
