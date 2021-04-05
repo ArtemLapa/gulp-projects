@@ -3,7 +3,8 @@ $style: "intro";
   margin-top: 46px;
   @include flex(center, center, column);
   &__heading {
-    max-width: 236px;
+    min-width: 236px;
+    max-width: 734px;
     @include text($H360, 700, $white-100);
     font-family: $playfair;
     text-align: center;
@@ -14,7 +15,8 @@ $style: "intro";
     font-family: $karla;
     text-align: center;
     line-height: 1.5;
-    max-width: 272px;
+    min-width: 272px;
+    max-width: 492px;
     margin-bottom: 14px;
   }
   &__arrow-down {

@@ -1,7 +1,9 @@
 $style: "order";
 .#{$style} {
   background-color: $black-100;
+  max-width: 1130px;
   width: 100%;
+  margin: 0px auto;
   padding: 28px 18px 30px;
   border-radius: 5px;
   &__heading {

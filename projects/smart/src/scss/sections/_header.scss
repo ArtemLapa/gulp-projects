@@ -5,7 +5,9 @@ $style: "header";
   padding-bottom: 44px;
   background-image: url(../img/pic-mob.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: top;
+  background-color: $grey-100;
   position: relative;
   z-index: 1;
   &:before {
@@ -21,6 +23,61 @@ $style: "header";
   }
   &__navigation {
     @include flex(space-between, center);
+  }
+  &__link-home {
+    display: block;
+  }
+  &__logo-wrapper {
+    z-index: 1;
+  }
+  &__logo {
+    width: 76px;
+    height: 24px;
+  }
+  &__navigation-menu-wrapper {
+    background-color: $grey-80;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80vh;
+    transform: translateY(-100%);
+    transition: all .3s ease-in-out;
+    &--active {
+      transform: translateY(0);
+      transition: all .3s ease-in-out;
+    }
+  }
+  &__navigation-menu-items {
+    @include flex(center, center, column);
+    margin-top: 15vh;
+  }
+  &__submit-btn {
+    @include flex(center, center);
+    width: 250px;
+    margin-bottom: 62px;
+  }
+  &__navigation-item {
+    text-align: center;
+    margin-bottom: 32px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  &__navigation-link {
+    @include text($H240, 400, $white-100);
+    font-family: $karla;
+    line-height: 1.25;
+    text-align: center;
+    position: relative;
+    &:hover {
+      border-bottom: 1px solid $white-100;
+      border-radius: 0.5px;
+    }
+    &--active {
+      border-bottom: 1px solid $white-100;
+      border-radius: 0.5px;
+    }
   }
   &__menu-btn {
     position: relative;

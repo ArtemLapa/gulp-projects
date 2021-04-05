@@ -20,14 +20,26 @@
           </a>
         </div>
 
+        <div class="header__navigation-menu-wrapper">
+          <div class="header__navigation-menu-items">
+            <a type="submit" class="primary-btn header__submit-btn">Order Now</a>
+            <ul class="header__navigation-list">
+              <li class="header__navigation-item">
+                <a href="/" class="header__navigation-link header__navigation-link--active">Home</a>
+              </li>
+              <li class="header__navigation-item">
+                <a href="#aboutUs" class="header__navigation-link">About Us</a>
+              </li>
+              <li class="header__navigation-item">
+                <a href="#blog" class="header__navigation-link">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <button class="header__menu-btn">
           <span class="header__btn-element"></span>
         </button>
-
-        <!-- <div class="header__navigation-menu-wrapper">
-          <button type="submit" class="order__submit-btn">Order Now</button>
-          <ul class="header__navigation-list"></ul>
-        </div> -->
       </nav>
 
       <div class="intro">
@@ -36,7 +48,9 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Ut enim ad minim
         </p>
-        <img src="./img/down.png" alt="arrow down" class="intro__arrow-down">
+        <a href="#testimonials" class="intro__anchor">
+          <img src="./img/down.png" alt="arrow down" class="intro__arrow-down">
+        </a>
       </div>
 
       <div class="order">
@@ -64,7 +78,7 @@
   </header>
 
   <main class="main">
-    <section class="testimonials">
+    <section id="testimonials" class="testimonials">
       <div class="container">
         <h3 class="testimonials__heading">Testimonials</h3>
 
