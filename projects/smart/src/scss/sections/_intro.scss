@@ -9,6 +9,9 @@ $style: "intro";
     font-family: $playfair;
     text-align: center;
     margin-bottom: 26px;
+    @include media($screen-desktop) {
+      font-size: $H420;
+    }
   }
   &__description {
     @include text($H60, 400, $white-100);
@@ -18,10 +21,23 @@ $style: "intro";
     min-width: 272px;
     max-width: 492px;
     margin-bottom: 14px;
+    @include media($screen-desktop) {
+      font-size: $H80;
+      margin-bottom: 22px;
+    }
+  }
+  &__anchor {
+    margin-bottom: 14px;
+    @include media($screen-desktop) {
+      margin-bottom: 26px;
+    }
   }
   &__arrow-down {
     width: 17px;
     height: 23px;
-    margin-bottom: 14px;
+    @include media($screen-desktop) {
+      width: 23px;
+      height: 32px;
+    }
   }
 }

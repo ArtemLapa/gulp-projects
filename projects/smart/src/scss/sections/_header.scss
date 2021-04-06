@@ -10,16 +10,9 @@ $style: "header";
   background-color: $grey-100;
   position: relative;
   z-index: 1;
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    background: rgba(#3a3a3a, .7);
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
+  @include media($screen-desktop) {
+    background-image: url(../img/pic.jpg);
+    padding-bottom: 50px;
   }
   &__navigation {
     @include flex(space-between, center);
@@ -33,6 +26,10 @@ $style: "header";
   &__logo {
     width: 76px;
     height: 24px;
+    @include media($screen-desktop) {
+      width: 118px;
+      height: 36px;
+    }
   }
   &__navigation-menu-wrapper {
     background-color: $grey-80;
@@ -43,6 +40,13 @@ $style: "header";
     height: 80vh;
     transform: translateY(-100%);
     transition: all .3s ease-in-out;
+    @include media($screen-desktop) {
+      position: relative;
+      position: relative;
+      height: auto;
+      transform: translateY(0);
+      background-color: transparent;
+    }
     &--active {
       transform: translateY(0);
       transition: all .3s ease-in-out;
@@ -51,15 +55,47 @@ $style: "header";
   &__navigation-menu-items {
     @include flex(center, center, column);
     margin-top: 15vh;
+    @include media($screen-desktop) {
+      margin-top: 0px;
+      flex-direction: row-reverse;
+    }
   }
-  &__submit-btn {
+  &__submit-btn-mob {
     @include flex(center, center);
     width: 250px;
     margin-bottom: 62px;
+    @include media($screen-desktop) {
+      margin-bottom: 0px;
+      display: none;
+    }
+  }
+  &__submit-btn-desktop {
+    display: none;
+    @include media($screen-desktop) {
+      @include flex(center, center);
+      width: 200px;
+      height: 42px;
+      border-radius: 5px;
+      &:hover {
+        background-color: #ca5944;
+      }
+    }
+  }
+  &__navigation-list {
+    @include media($screen-desktop) {
+      @include flex(center, center);
+    }
   }
   &__navigation-item {
     text-align: center;
     margin-bottom: 32px;
+    @include media($screen-desktop) {
+      margin-bottom: 0px;
+      margin-right: 44px;
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
     &:last-child {
       margin-bottom: 0px;
     }
@@ -70,13 +106,26 @@ $style: "header";
     line-height: 1.25;
     text-align: center;
     position: relative;
+    transition: all .3s ease-in-out;
+    @include media($screen-desktop) {
+      font-size: $H80;
+      padding: 5px 10px;
+    }
     &:hover {
       border-bottom: 1px solid $white-100;
       border-radius: 0.5px;
+      @include media($screen-desktop) {
+        border: none;
+        background-color: $grey-80;
+      }
     }
     &--active {
       border-bottom: 1px solid $white-100;
       border-radius: 0.5px;
+      @include media($screen-desktop) {
+        border: none;
+        background-color: $grey-80;
+      }
     }
   }
   &__menu-btn {
@@ -86,6 +135,9 @@ $style: "header";
     background: transparent;
     border: none;
     outline: none;
+    @include media($screen-desktop) {
+      display: none;
+    }
     &--active {
       .header__btn-element {
         height: 0;

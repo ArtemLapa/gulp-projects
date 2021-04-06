@@ -24,7 +24,8 @@
 
         <div class="header__navigation-menu-wrapper">
           <div class="header__navigation-menu-items">
-            <a type="submit" class="primary-btn header__submit-btn">Order Now</a>
+            <a type="submit" class="primary-btn header__submit-btn-mob">Order Now</a>
+
             <ul class="header__navigation-list">
               <li class="header__navigation-item">
                 <a href="/" class="header__navigation-link header__navigation-link--active">Home</a>
@@ -38,6 +39,8 @@
             </ul>
           </div>
         </div>
+
+        <a type="submit" class="primary-btn header__submit-btn-desktop">Order Now</a>
 
         <button class="header__menu-btn">
           <span class="header__btn-element"></span>
@@ -59,19 +62,21 @@
         <form class="order__form">
           <h6 class="order__heading">Place your order</h6>
 
-          <input type="email" name="email" id="email" class="order__input" placeholder="Enter your email">
+          <div class="order__fields-wrapper">
+            <input type="email" name="email" id="email" class="order__input" placeholder="Enter your email">
 
-          <select name="complexity" id="complexity" class="order__select">
-            <option value="essay" class="order__option">Essay</option>
-            <option value="middle" class="order__option">Middle</option>
-            <option value="hard" class="order__option">Hard</option>
-          </select>
+            <select name="complexity" id="complexity" class="order__select">
+              <option value="essay" class="order__option">Essay</option>
+              <option value="middle" class="order__option">Middle</option>
+              <option value="hard" class="order__option">Hard</option>
+            </select>
 
-          <select name="size" id="size" class="order__select">
-            <option value="essay" class="order__option">275</option>
-            <option value="middle" class="order__option">350</option>
-            <option value="hard" class="order__option">415</option>
-          </select>
+            <select name="size" id="size" class="order__select">
+              <option value="essay" class="order__option">275</option>
+              <option value="middle" class="order__option">350</option>
+              <option value="hard" class="order__option">415</option>
+            </select>
+          </div>
 
           <button type="submit" class="primary-btn order__primary-btn ">Order Now</button>
         </form>
@@ -86,27 +91,73 @@
 
         <div class="swiper-container">
           <div class="swiper-wrapper">
-            <div class="testimonials__card-wrapper swiper-slide">
-              <p class="testimonials__text">
-                When I was stuck with my essay writing and thought that there is no way out, you guys appeared out of
-                the
-                blue! Your writing team deserves appreciation. I cannot imagine my student life without your competent
-                assistance. Thank you!
-              </p>
-              <span class="testimonials__author">Andrey L.</span>
+
+            <div class="testimonials__item-container swiper-slide">
+              <div class="testimonials__card-wrapper">
+                <p class="testimonials__text">
+                  When I was stuck with my essay writing and thought that there is no way out, you guys appeared out
+                  of
+                  the
+                  blue! Your writing team deserves appreciation. I cannot imagine my student life without your
+                  competent
+                  assistance. Thank you!
+                </p>
+                <span class="testimonials__author">Andrey L.</span>
+              </div>
+
+              <div class="testimonials__detail-wrapper">
+                <div class="swiper-pagination testimonials__rate"></div>
+                <!-- <span class="testimonials__rate">3/10</span> -->
+                <button class="primary-btn testimonials__primary-btn">Add Testimonial</button>
+              </div>
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+
+            <div class="testimonials__item-container swiper-slide">
+              <div class="testimonials__card-wrapper">
+                <p class="testimonials__text">
+                  When I was stuck with my essay writing and thought that there is no way out, you guys appeared out
+                  of
+                  the
+                  blue! Your writing team deserves appreciation. I cannot imagine my student life without your
+                  competent
+                  assistance. Thank you!
+                </p>
+                <span class="testimonials__author">Andrey L.</span>
+              </div>
+
+              <div class="testimonials__detail-wrapper">
+                <div class="swiper-pagination testimonials__rate"></div>
+                <!-- <span class="testimonials__rate">3/10</span> -->
+                <button class="primary-btn testimonials__primary-btn">Add Testimonial</button>
+              </div>
+            </div>
+
+            <div class="testimonials__item-container swiper-slide">
+              <div class="testimonials__card-wrapper">
+                <p class="testimonials__text">
+                  When I was stuck with my essay writing and thought that there is no way out, you guys appeared out
+                  of
+                  the
+                  blue! Your writing team deserves appreciation. I cannot imagine my student life without your
+                  competent
+                  assistance. Thank you!
+                </p>
+                <span class="testimonials__author">Andrey L.</span>
+              </div>
+
+              <div class="testimonials__detail-wrapper">
+                <div class="swiper-pagination testimonials__rate"></div>
+                <!-- <span class="testimonials__rate">3/10</span> -->
+                <button class="primary-btn testimonials__primary-btn">Add Testimonial</button>
+              </div>
+            </div>
+
           </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
 
         </div>
 
-        <div class="testimonials__detail-wrapper">
-          <!-- <div class="swiper-pagination"></div> -->
-
-          <span class="testimonials__rate">3/10</span>
-          <button class="primary-btn testimonials__primary-btn">Add Testimonial</button>
-        </div>
       </div>
     </section>
   </main>

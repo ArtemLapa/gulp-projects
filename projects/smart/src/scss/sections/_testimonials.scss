@@ -2,18 +2,29 @@ $style: "testimonials";
 .#{$style} {
   padding-top: 42px;
   padding-bottom: 68px;
+  @include media($screen-desktop) {
+    padding-top: 82px;
+    padding-bottom: 80px;
+  }
   &__heading {
     @include text($H360, 400, $grey-80);
     font-family: $playfair;
     text-align: center;
     margin-bottom: 30px;
+    @include media($screen-desktop) {
+      font-size: $H480;
+      margin-bottom: 36px;
+    }
   }
   &__card-wrapper {
     background-color: $white-100;
     border-radius: 3px;
     padding: 30px 20px 50px;
     box-shadow: 0px 4px 10px 0px rgba(194, 203, 210, 0.27);
-    margin-right: 15px;
+    margin-bottom: 26px;
+    @include media($screen-desktop) {
+      margin-bottom: 40px;
+    }
     &:last-child {
       margin-right: 0px;
     }
@@ -43,6 +54,12 @@ $style: "testimonials";
   }
   &__detail-wrapper {
     @include flex(center, center, column);
+    @include media($screen-desktop) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 15px;
+      margin-bottom: 5px;
+    }
   }
   &__rate {
     @include text($H240, 400, $grey-80);

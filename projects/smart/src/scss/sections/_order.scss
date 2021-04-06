@@ -1,16 +1,29 @@
 $style: "order";
 .#{$style} {
-  background-color: $black-100;
+  background: $black-100;
   max-width: 1130px;
   width: 100%;
   margin: 0px auto;
   padding: 28px 18px 30px;
   border-radius: 5px;
+  @include media($screen-desktop) {
+    background: rgba(#000000, .63);
+    padding: 34px 42px 40px;
+  }
   &__heading {
     @include text($H60, 400, $white-100);
     font-family: $playfair;
     text-align: center;
     margin-bottom: 14px;
+    @include media($screen-desktop) {
+      font-size: $H240;
+    }
+  }
+  &__fields-wrapper {
+    @include media($screen-desktop) {
+      @include flex(space-between, center);
+      margin-bottom: 24px;
+    }
   }
   &__input {
     width: 100%;
@@ -24,12 +37,19 @@ $style: "order";
 
     @include text($H60, 400, $white-100);
     font-family: $karla;
+    @include media($screen-desktop) {
+      margin-bottom: 0px;
+      margin-right: 38px;
+    }
     &::placeholder {
       color: $white-100;
     }
     &:focus {
       outline: none;
       box-shadow: 0 0 0 3px #a0827c;
+    }
+    &:hover {
+      box-shadow: 0 0 3px 1px #a0827c;
     }
   }
   &__select {
@@ -44,15 +64,32 @@ $style: "order";
     background-repeat: no-repeat;
     background-position: right 16px top 50%, 0 0;
     appearance: none;
+    cursor: pointer;
 
     @include text($H60, 400, $white-100);
     font-family: $karla;
+    @include media($screen-desktop) {
+      margin-bottom: 0px;
+      margin-right: 38px;
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
     &:hover {
-      border-color: #888;
+      box-shadow: 0 0 3px 1px #a0827c;
     }
     &:focus {
       outline: none;
       box-shadow: 0 0 0 3px #a0827c;
+    }
+  }
+  &__primary-btn {
+    @include media($screen-desktop) {
+      width: 224px;
+      height: 42px;
+      display: block;
+      margin: 0px auto;
+      font-size: $H80;
     }
   }
 }

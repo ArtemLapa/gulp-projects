@@ -65,11 +65,14 @@ p {
   border-radius: 3px;
   background-color: $red;
   border: none;
+  transition: all .3s ease-in-out;
 
   @include text($H60, 400, $white-100);
   font-family: $karla;
+  cursor: pointer;
 
-  &:focus {
+  &:focus,
+  &:active {
     outline: none;
     box-shadow: 0 0 0 3px #ce3e22;
   }
@@ -85,7 +88,29 @@ p {
 .swiper-container {
   min-width: 290px;
   max-width: 1920px;
-  // min-height: 290px;
-  // max-height: 210px;
   margin-bottom: 28px;
+}
+
+.swiper-button-prev {
+  background: url(../img/arrow-prev.png) no-repeat center center;
+  left: 0;
+  &:after {
+    content: '';
+  }
+}
+
+.swiper-button-next {
+  background: url(../img/arrow-next.png) no-repeat center center;
+  right: 0;
+  &:after {
+    content: '';
+  }
+}
+
+.testimonials__rate {
+  position: relative;
+  margin-bottom: 0px;
+  text-align: left;
+  bottom: 0;
+  width: 50px;
 }
