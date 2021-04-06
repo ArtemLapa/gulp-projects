@@ -9,10 +9,11 @@ menuBtn.addEventListener('click', function (event) {
 
 const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
-  spaceBetween: 10,
+  spaceBetween: 20,
   direction: 'horizontal',
   loop: true,
   arrows: true,
+  centeredSlides: true,
   pagination: {
     el: '.swiper-pagination',
     type: 'fraction',
@@ -31,8 +32,12 @@ const swiper = new Swiper('.swiper-container', {
     },
     1024: {
       slidesPerView: 2,
-      spaceBetween: 30,
-      slidesPerGroup: 1,
+      spaceBetween: 40,
+      // slidesPerGroup: 1,
     },
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 70,
+    }
   }
 });

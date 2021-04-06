@@ -46,11 +46,14 @@ $style: "testimonials";
     }
   }
   &__author {
-    @include text($H60, 400, $grey-80);
+    @include text($H60, 700, $grey-80);
     text-align: center;
     font-family: $ovo;
     line-height: 1.5;
     display: block;
+    @include media($screen-tablet-large) {
+      text-align: left;
+    }
   }
   &__detail-wrapper {
     @include flex(center, center, column);

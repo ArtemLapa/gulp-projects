@@ -57,6 +57,9 @@ p {
   margin: 0 auto;
   padding: 0 16px;
   width: 100%;
+  @include media($screen-desktop) {
+    max-width: 1162px;
+  }
 }
 
 .primary-btn {
@@ -86,25 +89,50 @@ p {
 }
 
 .swiper-container {
-  min-width: 290px;
+  padding: 0 16px;
+  min-width: 280px;
   max-width: 1920px;
   margin-bottom: 28px;
 }
 
 .swiper-button-prev {
   background: url(../img/arrow-prev.png) no-repeat center center;
+  top: 35%;
   left: 0;
   &:after {
     content: '';
+  }
+  @include media($screen-tablet-small) {
+    left: 22%;
+  }
+  @include media($screen-tablet-large) {
+    left: 23%;
+  }
+  @include media($screen-fullhd) {
+    left: 33%;
   }
 }
 
 .swiper-button-next {
   background: url(../img/arrow-next.png) no-repeat center center;
+  top: 35%;
   right: 0;
   &:after {
     content: '';
   }
+  @include media($screen-tablet-small) {
+    right: 22%;
+  }
+  @include media($screen-tablet-large) {
+    right: 23%;
+  }
+  @include media($screen-fullhd) {
+    right: 33%;
+  }
+}
+
+.swiper-slide {
+  max-width: 730px;
 }
 
 .testimonials__rate {
